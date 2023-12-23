@@ -27,8 +27,7 @@ function app(opts) {
 
   const customSearchClient = {
     search(requests) {
-      const engine = document.getElementById("engine").value;
-      return fetch("http://localhost:8080/1/indexes/*/queries/" + engine, {
+      return fetch("http://localhost:8080/1/indexes/*/queries/", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
